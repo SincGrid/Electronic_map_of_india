@@ -1,0 +1,37 @@
+VALUE_ON_SERIAL,STATE,CAPITAL,AREA(km^2),POPULATION,FOOD,TOURIST_ATTRACTION,MALE_FEMALE_RATIO,LITERACY_RATE
+1,DELHI,NEW DELHI,"1,484",25 million,"paranthas, chaat, butter chicken","RED FORT, INDIA GATE, QUTUB MINAR",821,86.34
+2,UTTAR PRADESH,LUCKNOW,"243,286",20.42 Crores,"veg kofta,curry and rice","ayodhya, Mathura, fatehpur sikri, agra",943,69.72
+3,UTTARAKHAND,DEHRADUN,"53,483",1.01 crores,"KUMAONI RAITA, GAHAT KE PARATHE","RISHIKESH, HARIDWAR, MUSSOORIE, NAINITAL",963,79.63
+4,ANDAMAN & NICOBAR ISLAND,PORT BLAIR,"8,250",3.81 lakhs,COCONUT PRAWN CURRY,"HAVELOCK ISLANDS ,BRATANY ISLAND, RADHANAGAR",777,86.27
+5,ANDHRA PRADESH,AMARAVATI,"162,970","49,386,799","Rice, dal , sea food","Tirupati , Visakhapatnam, Nellore",993,67.4
+6,CHATTISGARH,RAIPUR,"135,198",2.55 crores,"BARFI, SHEER KHURMA, DAL, JALEBI","TEERATHGARH, FALLS, INDRAVATI NATIONAL PARK",991,71.04
+7,JHARKHAND,RANCHI,"79,714",3.19 crores,"DHUSKA, LITTI CHOKHA, PITTHA","JAMSHEDPUR,  RANCHI, DHANBAD",948,67.63
+8,MADHYA PRADESH,BHOPAL,"308,252",7.33 crores,"DAAL BAATI, SEEKH , KEBABS, BHOPALI GHOSHT KORMA","BHOPAL, GWALIOR, INDORE",931,70.63
+9,ARUNACHAL PRADESH,ITANAGAR,"83,743",1382611,Apong  (rice beer )\nThukpa\nMomos,"Parshuram Kund, Golden Pagoda, Namsai, Jawaharlal Nehru Museum",938,66.95
+10,ASSAM,DISPUR,"78,438","31,205,576","Khaar, Duck meat curry, Pura, Pitika, Khorisa, masoor jool","Kaziranga National Park, Kamakhya Temple, Pobitora Wildlife Sanctuary, Umananda Island, Talatal Ghar",958,73.18
+11,BIHAR,PATNA,"94,163","103,804,637","DHUSKA, LITTI CHOKHA, PITTHA","Vishnupadh temple, bodh gaya temple, sita kund, Buddha smriti park",918,63.82
+12,CHANDIGARH,,114,10.6 lakhs,"Butter chicken, stuffed parantha and lassi","Rock Garden, Rose Garden, Open Hand Monument",818,86.43
+13,DADRA AND NAGAR HAVELI,SILVASSA,491,0.343 million,"bamboo shoots, mushrooms, pulses","SILVASSA VASONA LION SAFARI, NAKSHATRA GARDEN, TRIBAL CULTURAL MUSEUM, HIRWA VAN GARDEN",774,77.65
+14,GUJARAT,GANDHINAGAR,"196,024",6.82 crores ,"Dhokla, Khandvi, Khakhra"," Somnath Temple, Gir Forest National Park, Sabarmati Ashram, Dwarkadhish Temple",919,79.31
+15,HARYANA,CHANDIGARH,"44,212","25,353,081","Nooni, Tindi, Ghee, Butter Milk","Badkhal Lake, Barsi Gate",879,76.64
+16,HIMACHAL PRADESH,SHIMLA,"55,673","6,864,602"," Manee, Madeera, Pateer, Chouck","Rohtang Pass, Spiti Valley, Mall Road, Shimla",972,83.78
+17,KERALA,THIRUANANTHAPURAM,"38,863",3.34 crores,"puttu and kadala curry, Appam, Rasam, Masala fried prawns, Dosa","The backwaters, Fort kochi, Eravikulam national park, Athirappilly falls, Mattupetty dam",1084,93.91
+18,TAMILNADU,CHENNAI,"130,060",7.21 crores,"Takkali sadam, Idli podi, Sundal, Naralchi vadi, Ven pongal","Thanjuvar, Tiruchirapalli, Kodiakanal, Rameswaram, Coonoor",996,80.33
+19,NAGALAND,KOHIMA,"16,579",3.34 crores,"Hinkejvu, Akibiye, Akini chokibo, Fish in bamboo, Zutho",,931,80.11
+20,DAMAN & DIU,DAMAN,112,2.43 lakhs,"Cozido, Lobsters, Fishes, Portugese dishes","Jampore beach, Naida caves, St. Paul’s church, Diu museum",618,87.07
+21,PUNJAB,CHANDIGARH,"50,361",2.8 crores,"Makki ki roti, sarson ka saag, aloo parantha, lassi","Golden Temple, Jallianwala Bagh, Durgyana Temple, Rock Garden",895,76.68
+22,PUDUCHERRY,,562,"1,244,464","Assad, Palpayasam","St. Luke-Sacred heart Church, Sri Aurobindo Ashram",1037,86.55
+23,ODISHA,BHUBANESHWAR,"155,707",4.37 crores,,"Dhauli Hills, Udayagiri & Khandagiri caves, Ratnagiri Buddhist Excavations, Bindu Sarovara",979,73.45
+24,WEST BENGAL,KOLKATA,"88,752",9.03 crores,Rice and fish,"Kolkata,Sundarbans national park, Darjeeling",950,77.08
+25,MEGHALAYA,SHILLONG,"22,720",32.1 lakhs,"The main Meghalaya food comprises of rice along with fish or meat preparations, A special kind of beer is prepared from fermented rice","Exploring shilling, Don Bosco Museum of Indigenous Cultures, Living root bridges",989,75.48
+26,RAJASTHAN,JAIPUR,"342,239","68,548,437","Dal-Bati-Churma, Ghevar","Jantar Mantar, Chittor Fort",928,67.06
+27,MIZORAM,AIZWAL,"21,087","1,091,014",Rice,"Phawngpui Hills, Phulpui Grave, Memorial of Chhingpui",976,91.58
+28,MANIPUR,IMPHAL,"22,327","2,855,794","kang-ngou, Paaknam","Kangla Fort, Loktak Lake",987,79.85
+29,MAHARASHTRA,MUMBAI,"307,713",112 MILLION,"Puran Poli,  Shrikhand, “vada pav”, “Mumbai chaat”","AURANGABAD, AJANTA CAVES, LONAVALA, MAHABALESHWAR",929,82.91
+30,KARNATAKA,BENGALURU,"191,791",6.41 crores,"Udupi, Malnadu","Bangalore Palace, Mysore Palace",973,75.6
+31,GOA,PANAJI,"3,702",18.2 lakhs,"Goan Fish Curry, Fish Recheado","Miramar Beach, Calangute Beach",973,87.4
+32,TRIPURA,AGARTALA,"10,491","3,671,032",Rice beer,"Kumarghat, Deotamura, Pilak, Unakoti",960,87.75
+33,TELANGANA,HYDERABAD,"112,077",3.52 CRORES,"SAJJA ROTTE, UPPUNDI PINDI, BAGAR KHANE","GOLCONDA FORT, PAKHUL LAKE, PAPI KOLATAM",943,66.5
+34,SIKKIM,GANGTOK,"7,096",6.19 LAKHS,"THUKPA, THENTHUK, FAKTHU","YUMTHANG VALLEY, NATHULA PASS",890,82.2
+35,JAMMU & KASHMIR,SRINAGAR,"101,338",1.25 crores,"Modur Pulav, Rogan Josh, Matschgand","Vaishno Devi, Gulmarg, Ladakh",889,68.74
+36,LAKSHADWEEP,KAVARATTI,32.69,"64,429","Sea food, prawns","Kadmat island, Kalpeni",946,92.28

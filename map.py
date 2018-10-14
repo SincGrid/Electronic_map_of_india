@@ -74,7 +74,20 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.setMapTo(1,"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum")
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+    def setMapTo(self,mapId,Content):
+        pixmap = QtGui.QPixmap("images/{}.png".format(str(mapId)))
+        pixmap_image = QtGui.QPixmap(pixmap)
+        self.map_image_object.setPixmap(pixmap_image)
+        self.map_image_object.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
+        self.map_image_object.setScaledContents(True)
+        self.map_image_object.setMinimumSize(1,1)
+
+        self.map_data.setText(Content)
+        self.map_data.setWordWrap(True)
+        self.map_log.setText("working log - delhi selected")
+
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Electronics map of india - By sincgrid.com", None))
@@ -90,6 +103,8 @@ class Ui_MainWindow(object):
         self.map_image_object.setText(_translate("MainWindow", "Map_image", None))
         self.map_data.setText(_translate("MainWindow", "map_data", None))
         self.map_log.setText(_translate("MainWindow", "map_log", None))
+
+        self.map_log.setText("log")
 
 import logo_rc
 
