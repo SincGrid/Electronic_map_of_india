@@ -25,7 +25,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(1040, 600)
+        MainWindow.resize(1074, 625)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.verticalLayoutWidget = QtGui.QWidget(self.centralwidget)
@@ -61,22 +61,34 @@ class Ui_MainWindow(object):
         self.map_data.setObjectName(_fromUtf8("map_data"))
         self.horizontalLayout_2_map_detail.addWidget(self.map_data)
         self.verticalLayoutWidget_2 = QtGui.QWidget(self.centralwidget)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(10, 510, 1011, 51))
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(10, 510, 621, 71))
         self.verticalLayoutWidget_2.setObjectName(_fromUtf8("verticalLayoutWidget_2"))
         self.verticalLayout_2_log = QtGui.QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2_log.setObjectName(_fromUtf8("verticalLayout_2_log"))
-        self.map_log = QtGui.QLabel(self.verticalLayoutWidget_2)
+        self.horizontalLayoutWidget_4 = QtGui.QWidget(self.centralwidget)
+        self.horizontalLayoutWidget_4.setGeometry(QtCore.QRect(640, 510, 381, 73))
+        self.horizontalLayoutWidget_4.setObjectName(_fromUtf8("horizontalLayoutWidget_4"))
+        self.horizontalLayout_2 = QtGui.QHBoxLayout(self.horizontalLayoutWidget_4)
+        self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        self.SelectCom = QtGui.QTextEdit(self.horizontalLayoutWidget_4)
+        self.SelectCom.setObjectName(_fromUtf8("SelectCom"))
+        self.horizontalLayout_2.addWidget(self.SelectCom)
+        self.pushButton = QtGui.QPushButton(self.horizontalLayoutWidget_4)
+        self.pushButton.setObjectName(_fromUtf8("pushButton"))
+        self.horizontalLayout_2.addWidget(self.pushButton)
+        self.map_log = QtGui.QLabel(self.centralwidget)
+        self.map_log.setGeometry(QtCore.QRect(10, 508, 619, 71))
         self.map_log.setObjectName(_fromUtf8("map_log"))
-        self.verticalLayout_2_log.addWidget(self.map_log)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.setMapTo(1,"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum")
+        self.setMapToUpdate(1,"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum","Its Delhi")
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-    def setMapTo(self,mapId,Content):
+
+    def setMapToUpdate(self,mapId,Content,log):
         pixmap = QtGui.QPixmap("images/{}.png".format(str(mapId)))
         pixmap_image = QtGui.QPixmap(pixmap)
         self.map_image_object.setPixmap(pixmap_image)
@@ -87,7 +99,6 @@ class Ui_MainWindow(object):
         self.map_data.setText(Content)
         self.map_data.setWordWrap(True)
         self.map_log.setText("working log - delhi selected")
-
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Electronics map of india - By sincgrid.com", None))
@@ -102,9 +113,13 @@ class Ui_MainWindow(object):
         self.url.setAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.map_image_object.setText(_translate("MainWindow", "Map_image", None))
         self.map_data.setText(_translate("MainWindow", "map_data", None))
+        self.SelectCom.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.5pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; vertical-align:super;\">Type Com port</span></p></body></html>", None))
+        self.pushButton.setText(_translate("MainWindow", "Start", None))
         self.map_log.setText(_translate("MainWindow", "map_log", None))
-
-        self.map_log.setText("log")
 
 import logo_rc
 
