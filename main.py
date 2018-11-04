@@ -1,38 +1,35 @@
 import sys
-from PyQt4 import QtGui, QtSvg
-from PyQt4.QtCore import QThread, SIGNAL
-import map
-# app = QtGui.QApplication(sys.argv) 
-# svgWidget = QtSvg.QSvgWidget('./india.svg')
-# svgWidget.setGeometry(50,50,759,668)
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+from map import *
 
-# svgWidget.show()
-class getPostsThread(QThread):
-    def __init__(self,mapId,Content,log):
-        QThread.__init__(self)
-        self.mapId=mapId
-        self.Content=Content
-        self.log=log
+'''
+Genrate the map.py
+E:\Python27\Lib\site-packages\PyQt4\pyuic4.bat -x "H:\Python workspace\Electronic_map_of_india\map.ui" -o "H:\Python workspace\Electronic_map_of_india\map.py"
+'''
 
-    def __del__(self):
-        self.wait()
-    
-    def _get_new_serial_data(self):
-        pass
-    def run(self):
-        pass
-class ThreadingUpdate(QtGui.QMainWindow, design.Ui_MainWindow):
-    def __init__(self, parent=None, flags=0):
-        return super(ThreadingUpdate, self).__init__(parent, flags)
-def gui_init():
+class Populate_Map(QMainWindow, Ui_MainWindow):
+    def __init__(self):
+        QtGui.QMainWindow.__init__(self)
+        Ui_MainWindow.__init__(self)
+        self.setupUi(self)
+
+        #logo adding
+        self.sincgrid_logo.setPixmap(QtGui.QPixmap("LOGOv9_100.png"))
+        # self.sincgrid_logo.setAlignment(QtCore.)
+        self.sincgrid_logo.setScaledContents(False)
+        # self.label_logo.setMinimumSize(1,1)
+
+        self.cedt_logo.setPixmap(QtGui.QPixmap("cedt.png"))
+        self.cedt_logo.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
+        self.cedt_logo.setScaledContents(False)
+        # self.label_logo.setMinimumSize(1,1)
+
+if __name__ =="__main__":
     app = QtGui.QApplication(sys.argv)
-    MainWindow = QtGui.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
+    # MainWindow = QtGui.QMainWindow()
+    ui = Populate_Map()
+    # ui.setupUi(MainWindow)
+    # MainWindow.show()
+    ui.show()
     sys.exit(app.exec_())
-
-if __name__ == "__main__":
-    gui_init()
-
-    ui.setMapToUpdate(2,"xyz")
