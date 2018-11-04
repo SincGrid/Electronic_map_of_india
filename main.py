@@ -2,7 +2,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from map import *
-
+from FindCom import *
 '''
 Genrate the map.py
 E:\Python27\Lib\site-packages\PyQt4\pyuic4.bat -x "H:\Python workspace\Electronic_map_of_india\map.ui" -o "H:\Python workspace\Electronic_map_of_india\map.py"
@@ -24,6 +24,12 @@ class Populate_Map(QMainWindow, Ui_MainWindow):
         self.cedt_logo.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignVCenter)
         self.cedt_logo.setScaledContents(False)
         # self.label_logo.setMinimumSize(1,1)
+        # print
+        '''populate the com port'''
+        ports=available_serial_ports()
+        for items in (ports):
+            # print (items)
+            self.Select_port_comboBox.addItem(items)
 
 if __name__ =="__main__":
     app = QtGui.QApplication(sys.argv)
