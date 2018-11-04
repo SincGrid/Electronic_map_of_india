@@ -60,9 +60,9 @@ class Populate_Map(QMainWindow, Ui_MainWindow):
         try:
             self.logger.critical("Current index {} selection changed ".format(self.Select_port_comboBox.currentText()))
             self.map_log.setText("{} is selected".format(self.Select_port_comboBox.currentText()))
-            self.logger.critical("Type self.Select_port_comboBox.currentText() is {}\n and data is {}".format(type(self.Select_port_comboBox.currentText()),self.Select_port_comboBox.currentText()))
+            # self.logger.critical("Type self.Select_port_comboBox.currentText() is {}\n and data is {}".format(type(self.Select_port_comboBox.currentText()),self.Select_port_comboBox.currentText()))
             self.portname=str(self.Select_port_comboBox.currentText())
-            self.logger.critical("Type self.portname is {}\n and data is {}".format(type(self.portname),self.portname))
+            # self.logger.critical("Type self.portname is {}\n and data is {}".format(type(self.portname),self.portname))
             self.set_actions_enable_state()
         except Exception as e:
             self.logger.error(str(e))
@@ -70,6 +70,7 @@ class Populate_Map(QMainWindow, Ui_MainWindow):
         """ Executed periodically when the monitor update timer
             is fired.
         """
+        self.logger.debug("Screen refreshed")
         self.read_serial_data()
         self.update_monitor()
     
@@ -117,22 +118,60 @@ class Populate_Map(QMainWindow, Ui_MainWindow):
         self.timer = QtCore.QTimer()
         self.connect(self.timer, SIGNAL('timeout()'), self.on_timer)
         
-        update_freq = self.updatespeed_knob.value()
-        if update_freq > 0:
-            self.timer.start(1000.0 / update_freq)
+
+        self.timer.start(1000)
         
         self.map_log.setText('Monitor running')
 
     def set_actions_enable_state(self):
-        if self.portname.text() == None:
-            start_enable = stop_enable = False
-        else:
-            start_enable = not self.monitor_active
-            stop_enable = self.monitor_active
-        
-        self.start_action.setEnabled(start_enable)
-        self.stop_action.setEnabled(stop_enable)
+        try:
+            if self.portname == None:
+                start_enable = stop_enable = False
+            else:
+                start_enable = not self.monitor_active
+                stop_enable = self.monitor_active
+            
+            # self.start_action.setEnabled(start_enable)
+            # self.stop_action.setEnabled(stop_enable)
+        except Exception as e:
+            self.logger.error(str(e))
 
+    def read_serial_data(self):
+        """ Called periodically by the update timer to read data
+            from the serial port.
+        """
+        qdata = list(cu.get_all_from_queue(self.data_q))
+        if len(qdata) > 0:
+            data = dict(timestamp=qdata[-1][1], 
+                        nano_data=ord(qdata[-1][0]))
+            self.livefeed.add_data(data)
+
+    def update_monitor(self):
+        """ Updates the state of the monitor window with new 
+            data. The livefeed is used to find out whether new
+            data was received since the last update. If not, 
+            nothing is updated.
+        """
+        if self.livefeed.has_new_data:
+            data = self.livefeed.read_data()
+            
+            self.logger.info("data is {}".format(data))
+            # self.temperature_samples.append(
+            #     (data['timestamp'], data['temperature']))
+            # if len(self.temperature_samples) > 100:
+            #     self.temperature_samples.pop(0)
+            
+            # xdata = [s[0] for s in self.temperature_samples]
+            # ydata = [s[1] for s in self.temperature_samples]
+            
+            # avg = sum(ydata) / float(len(ydata))
+                
+            # self.plot.setAxisScale(Qwt.QwtPlot.xBottom, xdata[0], max(20, xdata[-1]))
+            # self.curve.setData(xdata, ydata)
+            # self.plot.replot()
+            
+            # self.thermo.setValue(avg)
+    
 if __name__ =="__main__":
     # print(inspect.getsource(logging))
     logger = logging.getLogger(__name__)
