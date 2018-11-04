@@ -97,7 +97,7 @@ class ComMonitorThread(threading.Thread):
             # PySerial.
             # 
             data = self.serial_port.read(1)
-            self.logger.info("rx data is => {}".format(data))
+            # self.logger.info("rx data is => {}".format(data))
             data += self.serial_port.read(self.serial_port.inWaiting())
             
             if len(data) > 0:

@@ -39,7 +39,7 @@ class Populate_Map(QMainWindow, Ui_MainWindow):
         self.com_monitor = None
         self.com_data_q = None
         self.com_error_q = None
-        self.livefeed = LiveDataFeed()
+        self.livefeed = LiveDataFeed(self.logger)
         # self.set_actions_enable_state()
         '''populate the com port'''
         ports=available_serial_ports()
